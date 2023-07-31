@@ -25,9 +25,9 @@ public class WaypointConfig {
 
     public WaypointConfig(int id){
         this.id = id;
-        this.map_id = "a6496fa7-d233-47e0-ba3b-da52c153ea65";
-        this.x = 0.08;
-        this.y = -0.12;
+        this.map_id = "5d253844-6acf-4545-ba5e-fe39210f834b";
+        this.x = 0.01;
+        this.y = -0.25;
         this.type = "recovery";
         this.config = new WaypointSpecificConfig(0.0);
     }

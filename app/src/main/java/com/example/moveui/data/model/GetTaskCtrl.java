@@ -12,10 +12,14 @@ public class GetTaskCtrl {
     @SerializedName("amr_id")
     @Expose
     private int amr_id;
+    @SerializedName("state")
+    @Expose
+    private String state;
 
-    public GetTaskCtrl(int id, int amr_id){
+    public GetTaskCtrl(int id, int amr_id, String state){
         this.id = id;
         this.amr_id = amr_id;
+        this.state = state;
     }
 
     public int getId() {
@@ -32,5 +36,13 @@ public class GetTaskCtrl {
 
     public void setAmr_id(int amr_id) {
         this.amr_id = amr_id;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
     }
 }

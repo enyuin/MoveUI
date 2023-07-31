@@ -3,17 +3,17 @@ package com.example.moveui.data.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class GoalCtrl {
+public class GoToCtrl {
     @SerializedName("id")
     @Expose
     private String id;
-    @SerializedName("goto")
+    @SerializedName("waypoint_name")
     @Expose
-    private GoToCtrl goto_tree;
+    private String waypoint_name;
 
-    public GoalCtrl(String id, GoToCtrl goto_tree){
+    public GoToCtrl(String id, String waypoint_name){
         this.id = id;
-        this.goto_tree = goto_tree;
+        this.waypoint_name = waypoint_name;
     }
 
     public String getId() {
@@ -24,11 +24,11 @@ public class GoalCtrl {
         this.id = id;
     }
 
-    public GoToCtrl getGoto_tree() {
-        return goto_tree;
+    public String getWaypoint_name() {
+        return waypoint_name;
     }
 
-    public void setGoto_tree(GoToCtrl goto_tree) {
-        this.goto_tree = goto_tree;
+    public void setWaypoint_name(String waypoint_name) {
+        this.waypoint_name = waypoint_name;
     }
 }

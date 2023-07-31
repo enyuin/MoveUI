@@ -6,9 +6,12 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 public class TaskCtrl {
-    @SerializedName("task_definition_id")
+    @SerializedName("workflow_id")
     @Expose
-    private int task_definition;
+    private int workflow_id;
+    @SerializedName("amr_id")
+    @Expose
+    private int amr_id;
     @SerializedName("goals")
     @Expose
     private List<GoalCtrl> goals;
@@ -16,18 +19,19 @@ public class TaskCtrl {
     @Expose
     private int priority;
 
-    public TaskCtrl(int task_definition, List<GoalCtrl> goals, int priority){
-        this.task_definition = task_definition;
+    public TaskCtrl(int workflow_id, List<GoalCtrl> goals, int priority){
+        this.workflow_id = workflow_id;
         this.goals = goals;
         this.priority = priority;
+        this.amr_id = 1;
     }
 
-    public int getTask_definition() {
-        return task_definition;
+    public int getWorkflow_id() {
+        return workflow_id;
     }
 
-    public void setTask_definition(int task_definition) {
-        this.task_definition = task_definition;
+    public void setWorkflow_id(int workflow_id) {
+        this.workflow_id = workflow_id;
     }
 
     public List<GoalCtrl> getGoals() {
